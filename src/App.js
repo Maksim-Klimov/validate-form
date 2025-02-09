@@ -12,7 +12,7 @@ function ValidateForm() {
     let erorrMessage = {};
 
     // Валидация поля на ввод имени
-    if (name.length < 0 || name.length == "") {
+    if (name.length < 0 || name.length == "" || name.split('').some(char => char < 'A' || char > 'Z' && char < 'a' || char > 'z')) {
       erorrMessage.name = "Ошибка! Введенное имя не соответствует требованиям!";
     }
 
